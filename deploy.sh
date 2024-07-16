@@ -21,7 +21,7 @@ reset)
     echo "===== reset ===="
     sudo docker-compose -f ethos.yml down
     sleep 3
-    cd ./services && sudo rm -rf blockscout-db-data logs redis-data stats-db-data
+    cd ./services && sudo rm -rf blockscout-db-data logs redis-data stats-db-data && cd ..
     sudo docker-compose -f ethos.yml up -d
     sleep 3
     sudo docker ps -a
