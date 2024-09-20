@@ -29,11 +29,11 @@ services:
     links:
       - db:database
     environment:
-      ETHEREUM_JSONRPC_HTTP_URL: https://rpc.ethos.cool/
-      ETHEREUM_JSONRPC_TRACE_URL: https://rpc.ethos.cool/
-      ETHEREUM_JSONRPC_WS_URL: ws://ws-rpc.ethos.cool/
+      ETHEREUM_JSONRPC_HTTP_URL: https://rpc.quarix.site/
+      ETHEREUM_JSONRPC_TRACE_URL: https://rpc.quarix.site/
+      ETHEREUM_JSONRPC_WS_URL: ws://ws-rpc.quarix.site/
       NEXT_PUBLIC_API_PROTOCOL: https
-      CHAIN_ID: '100000000'
+      CHAIN_ID: '8888888'
       FIRST_BLOCK: 1
       TRACE_FIRST_BLOCK: 1
       PRECOMPILED_CONTRACTS_CONFIG_PATH: /app/precompiles.json
@@ -52,7 +52,7 @@ services:
     depends_on:
       - backend
     extends:
-      file: ./services/ethos-frontend.yml
+      file: ./services/quarix-frontend.yml
       service: frontend
 
   stats-db-init:
@@ -90,5 +90,5 @@ services:
       - frontend
       - stats
     extends:
-      file: ./services/ethos-nginx.yml
+      file: ./services/quarix-nginx.yml
       service: proxy
