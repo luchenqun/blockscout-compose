@@ -8,4 +8,4 @@ services:
     restart: always
     container_name: 'frontend'
     env_file:
-      - ../envs/ethos-common-frontend.env
+      - ../envs/mud-common-frontend.env
