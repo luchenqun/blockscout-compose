@@ -15,3 +15,4 @@ services:
     volumes:
       - ./logs/:/app/logs/
       - ./precompiles.json:/app/precompiles.json
+      - ./chain.json:/app/chain.json
